@@ -1,7 +1,9 @@
+Install-Module psake -Scope CurrentUser -Force
+
 Get-ChildItem ENV:
 
 $varsPresent = $true
-('SecureVar', 'APPVEYOR_SSH_KEY', 'TEST_VAR') |
+('NugetApiKey', 'APPVEYOR_SSH_KEY') |
 Foreach-Object {
     if (-not (Test-Path -Path "ENV:$($_)"))
     {
