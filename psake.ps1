@@ -19,4 +19,4 @@ Task Init {
 
 }
 
-Task Default Depends Init
+Task Default -Depends Init
